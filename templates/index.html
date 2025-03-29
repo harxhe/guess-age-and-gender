@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form action="/predict" method="post">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    </div>
+    
+    {% if person_name %}
+    <div class="container">
+        <div class="card">
+            <p>Hello, {{ person_name }}! You might be {{ person_age }} years old and you are {{ person_gender }}.</p>
+        </div>
+    </div>
+    {% endif %}
+</body>
+</html>
