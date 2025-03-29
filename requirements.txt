@@ -1,0 +1,6 @@
+flask
+fastapi
+httpx
+uvicorn
+jinja2
+
