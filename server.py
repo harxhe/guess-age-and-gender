@@ -1,10 +1,7 @@
-#this is a simple server made that uses ageify and genderize api to predict the age and gender of a person based on their name 
-
 from fastapi import FastAPI, Form, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import httpx
-# from mangum import Mangum 
 
 app = FastAPI()
 
@@ -36,8 +33,6 @@ async def predict(request: Request, name: str = Form(...)):
         "index.html", 
         {"request": request, "person_name": name, "person_age": age, "person_gender": gender}
     )
-
-# handler = Mangum(app)
 
 # if __name__ == "__main__":
 #     import uvicorn
