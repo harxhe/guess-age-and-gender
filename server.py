@@ -4,7 +4,7 @@ from fastapi import FastAPI, Form, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import httpx
-from mangum import Mangum 
+# from mangum import Mangum 
 
 app = FastAPI()
 
@@ -37,7 +37,7 @@ async def predict(request: Request, name: str = Form(...)):
         {"request": request, "person_name": name, "person_age": age, "person_gender": gender}
     )
 
-handler = Mangum(app)
+# handler = Mangum(app)
 
 # if __name__ == "__main__":
 #     import uvicorn

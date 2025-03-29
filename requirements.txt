@@ -2,5 +2,5 @@ fastapi
 httpx
 uvicorn
 jinja2
-mangum
-python-multipart
+# mangum
+# python-multipart
