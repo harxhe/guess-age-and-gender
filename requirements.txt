@@ -3,3 +3,4 @@ httpx
 uvicorn
 jinja2
 mangum
+python-multipart
