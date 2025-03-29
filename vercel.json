@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "api/server.py"  
+        "dest": "api/server.handler"  
       }
     ]
   }
